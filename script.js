@@ -27,16 +27,16 @@ document.getElementById('dguv3-form').addEventListener('submit', function(event)
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        // Firmen- und Kundenadresse
+        // Setze Titel und Firmendaten
+        doc.setFontSize(16);
+        doc.text('DGUV3 Übergabeprotokoll', 20, 20);
+
+        // Firma und Kundenadresse
         doc.setFontSize(12);
-        doc.text(firmaAdresse, 20, 20);
-        doc.text(kundenAdresse, 20, 30);
+        doc.text(`Firma: ${firmaAdresse}`, 20, 40);
+        doc.text(`Kunde: ${kundenAdresse}`, 20, 50);
 
-        // Titel
-        doc.setFontSize(18);
-        doc.text('DGUV3 Übergabeprotokoll', 20, 50);
-
-        // Gerätedaten
+        // Geräteeinzelheiten
         doc.setFontSize(14);
         doc.text(`Gerät Name: ${gerätName}`, 20, 70);
         doc.text(`Gerätetyp: ${gerätTyp}`, 20, 80);
@@ -45,24 +45,30 @@ document.getElementById('dguv3-form').addEventListener('submit', function(event)
         doc.text(`Prüfintervall: ${prüfintervall} Monate`, 20, 110);
         doc.text(`Nächstes Prüfdatum: ${nächstesPrüfdatum}`, 20, 120);
         doc.text(`Prüfer: ${prüfer}`, 20, 130);
-        doc.text(`Ergebnisse:`, 20, 140);
+        doc.text('Ergebnisse:', 20, 140);
         doc.text(ergebnisse, 20, 150);
 
         // Barcode hinzufügen (Gerät Name)
-        JsBarcode("#barcode", gerätName, {
+        const barcodeData = gerätName; // Barcode-Daten sind der Gerätname
+        JsBarcode("#barcode", barcodeData, {
             format: "CODE128",
             width: 2,
             height: 40,
             displayValue: true,
-            text: gerätName
+            text: barcodeData
         });
         
-        // Barcode in PDF einfügen
+        // Barcode in die PDF einfügen
         const barcodeUrl = "#barcode";
         doc.addImage(barcodeUrl, "PNG", 150, 70, 50, 20);
+
+        // Unterschriftenfeld
+        doc.setFontSize(12);
+        doc.text('Unterschrift des Prüfers:', 20, 180);
+        doc.setLineWidth(0.5);
+        doc.line(20, 190, 180, 190); // Linie für die Unterschrift
 
         // PDF speichern
         doc.save(`${gerätName}_DGUV3_Prüfung.pdf`);
     };
 });
-
