@@ -19,8 +19,28 @@
             </div>
 
             <div class="form-group">
+                <label for="gerät-typ">Gerätetyp:</label>
+                <input type="text" id="gerät-typ" placeholder="z.B. Computer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="seriennummer">Seriennummer:</label>
+                <input type="text" id="seriennummer" placeholder="Seriennummer des Geräts" required>
+            </div>
+
+            <div class="form-group">
                 <label for="prüfdatum">Prüfdatum:</label>
                 <input type="date" id="prüfdatum" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prüfintervall">Prüfintervall:</label>
+                <input type="number" id="prüfintervall" placeholder="z.B. 12 Monate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nächstes-prüfdatum">Nächstes Prüfdatum:</label>
+                <input type="date" id="nächstes-prüfdatum" required>
             </div>
 
             <div class="form-group">
@@ -33,6 +53,16 @@
                 <textarea id="ergebnisse" rows="5" placeholder="Eingabe der Prüfergebnisse" required></textarea>
             </div>
 
+            <div class="form-group">
+                <label for="firma-adresse">Firmenadresse:</label>
+                <input type="text" id="firma-adresse" placeholder="Firmenadresse" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kunden-adresse">Kundenadresse:</label>
+                <input type="text" id="kunden-adresse" placeholder="Kundenadresse" required>
+            </div>
+
             <button type="submit" class="btn-submit">Prüfung Abschließen</button>
         </form>
 
@@ -42,8 +72,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     <script src="script.js"></script>
 
 </body>
 </html>
-
