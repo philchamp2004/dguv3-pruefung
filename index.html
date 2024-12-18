@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGUV3 Prüfung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>DGUV3 Prüfung</h1>
+
+        <form id="dguv3-form">
+            <label for="gerät-name">Gerät Name:</label>
+            <input type="text" id="gerät-name" required>
+
+            <label for="prüfdatum">Prüfdatum:</label>
+            <input type="date" id="prüfdatum" required>
+
+            <label for="prüfer">Prüfer Name:</label>
+            <input type="text" id="prüfer" required>
+
+            <label>Ergebnisse:</label>
+            <textarea id="ergebnisse" rows="5" required></textarea>
+
+            <button type="submit">Prüfung Abschließen</button>
+        </form>
+
+        <div id="download-section" style="display: none;">
+            <button id="download-pdf">PDF Herunterladen</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
