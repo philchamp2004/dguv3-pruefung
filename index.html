@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGUV3 Prüfung</title>
+    <title>DGUV3 Prüfung - Nachweis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,23 +13,31 @@
         <h1>DGUV3 Prüfung</h1>
 
         <form id="dguv3-form">
-            <label for="gerät-name">Gerät Name:</label>
-            <input type="text" id="gerät-name" required>
+            <div class="form-group">
+                <label for="gerät-name">Gerät Name:</label>
+                <input type="text" id="gerät-name" placeholder="z.B. Laptop" required>
+            </div>
 
-            <label for="prüfdatum">Prüfdatum:</label>
-            <input type="date" id="prüfdatum" required>
+            <div class="form-group">
+                <label for="prüfdatum">Prüfdatum:</label>
+                <input type="date" id="prüfdatum" required>
+            </div>
 
-            <label for="prüfer">Prüfer Name:</label>
-            <input type="text" id="prüfer" required>
+            <div class="form-group">
+                <label for="prüfer">Prüfer Name:</label>
+                <input type="text" id="prüfer" placeholder="Name des Prüfers" required>
+            </div>
 
-            <label>Ergebnisse:</label>
-            <textarea id="ergebnisse" rows="5" required></textarea>
+            <div class="form-group">
+                <label for="ergebnisse">Ergebnisse:</label>
+                <textarea id="ergebnisse" rows="5" placeholder="Eingabe der Prüfergebnisse" required></textarea>
+            </div>
 
-            <button type="submit">Prüfung Abschließen</button>
+            <button type="submit" class="btn-submit">Prüfung Abschließen</button>
         </form>
 
         <div id="download-section" style="display: none;">
-            <button id="download-pdf">PDF Herunterladen</button>
+            <button id="download-pdf" class="btn-download">PDF Herunterladen</button>
         </div>
     </div>
 
@@ -37,3 +46,4 @@
 
 </body>
 </html>
+
