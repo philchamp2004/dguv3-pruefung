@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Einfacher Texteditor</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moderne Musik-Streaming-Website">
+    <title>MusicStream</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="editor-container">
-    <div class="toolbar">
-      <button class="btn" onclick="formatText('bold')"><b>B</b></button>
-      <button class="btn" onclick="formatText('italic')"><i>I</i></button>
-      <button class="btn" onclick="formatText('underline')"><u>U</u></button>
-      <button class="btn" onclick="formatText('justifyLeft')">Links</button>
-      <button class="btn" onclick="formatText('justifyCenter')">Mitte</button>
-      <button class="btn" onclick="formatText('justifyRight')">Rechts</button>
-      <button class="btn" onclick="insertList('insertOrderedList')">Nummerierte Liste</button>
-      <button class="btn" onclick="insertList('insertUnorderedList')">Punktuelle Liste</button>
-      <button class="btn" onclick="saveDocument()">Speichern</button>
-    </div>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">MusicStream</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Search</a></li>
+                </ul>
+            </nav>
+            <div class="user">
+                <img src="https://via.placeholder.com/40" alt="User Profile">
+                <span>Hi, User</span>
+            </div>
+        </div>
+    </header>
 
-    <div class="editor" contenteditable="true" id="editor" spellcheck="false">
-      <p>Beginne mit dem Schreiben...</p>
-    </div>
-  </div>
+    <!-- Main Content -->
+    <main>
+        <div class="content">
+            <div class="hero">
+                <h1>Discover New Music</h1>
+                <p>Browse thousands of tracks, albums, and playlists</p>
+                <button>Get Started</button>
+            </div>
 
-  <script src="script.js"></script>
+            <section class="albums">
+                <h2>Popular Albums</h2>
+                <div class="album-container">
+                    <div class="album">
+                        <img src="https://via.placeholder.com/200" alt="Album 1">
+                        <p>Album 1</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://via.placeholder.com/200" alt="Album 2">
+                        <p>Album 2</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://via.placeholder.com/200" alt="Album 3">
+                        <p>Album 3</p>
+                    </div>
+                    <div class="album">
+                        <img src="https://via.placeholder.com/200" alt="Album 4">
+                        <p>Album 4</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MusicStream. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
