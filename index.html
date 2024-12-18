@@ -1,79 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGUV3 Prüfung - Nachweis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einfacher Texteditor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>DGUV3 Prüfung</h1>
-
-        <form id="dguv3-form">
-            <div class="form-group">
-                <label for="gerät-name">Gerät Name:</label>
-                <input type="text" id="gerät-name" placeholder="z.B. Laptop" required>
-            </div>
-
-            <div class="form-group">
-                <label for="gerät-typ">Gerätetyp:</label>
-                <input type="text" id="gerät-typ" placeholder="z.B. Computer" required>
-            </div>
-
-            <div class="form-group">
-                <label for="seriennummer">Seriennummer:</label>
-                <input type="text" id="seriennummer" placeholder="Seriennummer des Geräts" required>
-            </div>
-
-            <div class="form-group">
-                <label for="prüfdatum">Prüfdatum:</label>
-                <input type="date" id="prüfdatum" required>
-            </div>
-
-            <div class="form-group">
-                <label for="prüfintervall">Prüfintervall:</label>
-                <input type="number" id="prüfintervall" placeholder="z.B. 12 Monate" required>
-            </div>
-
-            <div class="form-group">
-                <label for="nächstes-prüfdatum">Nächstes Prüfdatum:</label>
-                <input type="date" id="nächstes-prüfdatum" required>
-            </div>
-
-            <div class="form-group">
-                <label for="prüfer">Prüfer Name:</label>
-                <input type="text" id="prüfer" placeholder="Name des Prüfers" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ergebnisse">Ergebnisse:</label>
-                <textarea id="ergebnisse" rows="5" placeholder="Eingabe der Prüfergebnisse" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="firma-adresse">Firmenadresse:</label>
-                <input type="text" id="firma-adresse" placeholder="Firmenadresse" required>
-            </div>
-
-            <div class="form-group">
-                <label for="kunden-adresse">Kundenadresse:</label>
-                <input type="text" id="kunden-adresse" placeholder="Kundenadresse" required>
-            </div>
-
-            <button type="submit" class="btn-submit">Prüfung Abschließen</button>
-        </form>
-
-        <div id="download-section" style="display: none;">
-            <button id="download-pdf" class="btn-download">PDF Herunterladen</button>
-        </div>
+  <div class="editor-container">
+    <div class="toolbar">
+      <button class="btn" onclick="formatText('bold')"><b>B</b></button>
+      <button class="btn" onclick="formatText('italic')"><i>I</i></button>
+      <button class="btn" onclick="formatText('underline')"><u>U</u></button>
+      <button class="btn" onclick="formatText('justifyLeft')">Links</button>
+      <button class="btn" onclick="formatText('justifyCenter')">Mitte</button>
+      <button class="btn" onclick="formatText('justifyRight')">Rechts</button>
+      <button class="btn" onclick="insertList('insertOrderedList')">Nummerierte Liste</button>
+      <button class="btn" onclick="insertList('insertUnorderedList')">Punktuelle Liste</button>
+      <button class="btn" onclick="saveDocument()">Speichern</button>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
-    <script src="script.js"></script>
+    <div class="editor" contenteditable="true" id="editor" spellcheck="false">
+      <p>Beginne mit dem Schreiben...</p>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
