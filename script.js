@@ -1,5 +1,4 @@
 // script.js
-
 document.getElementById('dguv3-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -7,6 +6,12 @@ document.getElementById('dguv3-form').addEventListener('submit', function(event)
     const prüfdatum = document.getElementById('prüfdatum').value;
     const prüfer = document.getElementById('prüfer').value;
     const ergebnisse = document.getElementById('ergebnisse').value;
+
+    // Überprüfung, ob alle Felder ausgefüllt sind
+    if (!gerätName || !prüfdatum || !prüfer || !ergebnisse) {
+        alert('Bitte fülle alle Felder aus!');
+        return;
+    }
 
     // Zeige den Download-Button nach dem Absenden des Formulars an
     document.getElementById('download-section').style.display = 'block';
