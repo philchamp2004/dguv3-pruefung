@@ -3,74 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGUV3 Prüfsoftware</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung zu CSS-Datei für Design -->
-    <script src="script.js" defer></script> <!-- Optionales JavaScript für Interaktivität -->
+    <title>Sexshop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- Header -->
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="DGUV3 Software">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#download">Download</a></li>
-            <li><a href="#support">Support</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- Hero-Bereich -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Effiziente DGUV3 Prüfsoftware</h1>
-        <p>Die Lösung für Ihre Sicherheitsprüfungen - Einfach, sicher, kompatibel mit allen Betriebssystemen.</p>
-        <a href="#download" class="cta-btn">Jetzt herunterladen</a>
-    </div>
-</section>
-
-<!-- Über die Software -->
-<section id="about">
-    <h2>Über die Software</h2>
-    <p>Unsere DGUV3 Software bietet eine benutzerfreundliche Lösung für alle Sicherheitsprüfungen gemäß den deutschen Sicherheitsstandards.</p>
-    <div class="features">
-        <div class="feature">
-            <h3>Intuitive Benutzeroberfläche</h3>
-            <p>Die benutzerfreundliche Oberfläche ermöglicht eine schnelle Einarbeitung.</p>
+    <header>
+        <div class="logo">
+            <h1>SexyShop</h1>
         </div>
-        <div class="feature">
-            <h3>Kompatibel mit allen Betriebssystemen</h3>
-            <p>Verfügbar für Windows, macOS und Linux.</p>
-        </div>
-        <div class="feature">
-            <h3>Automatisierte Berichterstellung</h3>
-            <p>Erstellen Sie automatisch Prüfberichte im DGUV3-Format.</p>
-        </div>
-    </div>
-</section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produkte</a></li>
+                <li><a href="#">Warenkorb (0)</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Download-Bereich -->
-<section id="download">
-    <h2>Download</h2>
-    <p>Wählen Sie Ihr Betriebssystem:</p>
-    <div class="download-buttons">
-        <a href="windows-version-link" class="download-btn">Windows</a>
-        <a href="mac-version-link" class="download-btn">macOS</a>
-        <a href="linux-version-link" class="download-btn">Linux</a>
-    </div>
-</section>
+    <main>
+        <section class="products">
+            <h2>Unsere Produkte</h2>
+            <div class="product">
+                <img src="images/product1.jpg" alt="Vibrator">
+                <h3>Vibrator A</h3>
+                <p>Erleben Sie ultimative Freude mit diesem hochwertigen Vibrator. Perfekt für intensive Erlebnisse.</p>
+                <p class="price">€39,99</p>
+                <button class="add-to-cart" onclick="addToCart('Vibrator A', 39.99)">In den Warenkorb</button>
+            </div>
+            <div class="product">
+                <img src="images/product2.jpg" alt="Dildo">
+                <h3>Dildo B</h3>
+                <p>Ein realistischer Dildo für intensiven Spaß. Weiches, flexibles Material für angenehme Erlebnisse.</p>
+                <p class="price">€29,99</p>
+                <button class="add-to-cart" onclick="addToCart('Dildo B', 29.99)">In den Warenkorb</button>
+            </div>
+            <div class="product">
+                <img src="images/product3.jpg" alt="Paarspielzeug">
+                <h3>Paarspielzeug Set</h3>
+                <p>Ein aufregendes Set für Paare. Für unvergessliche Momente zu zweit.</p>
+                <p class="price">€49,99</p>
+                <button class="add-to-cart" onclick="addToCart('Paarspielzeug Set', 49.99)">In den Warenkorb</button>
+            </div>
+        </section>
+    </main>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 DGUV3 Software. Alle Rechte vorbehalten.</p>
-        <a href="/datenschutz">Datenschutz</a> | <a href="/impressum">Impressum</a>
-    </div>
-</footer>
+    <footer>
+        <p>&copy; 2024 SexyShop - Alle Rechte vorbehalten</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
+
