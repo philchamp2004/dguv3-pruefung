@@ -3,62 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGU-V3 Software</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>DGUV3 Prüfsoftware</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinkung zu CSS-Datei für Design -->
+    <script src="script.js" defer></script> <!-- Optionales JavaScript für Interaktivität -->
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="DGU-V3 Logo">
-            <h1>DGU-V3 Software</h1>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="DGUV3 Software">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero-Bereich -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Effiziente DGUV3 Prüfsoftware</h1>
+        <p>Die Lösung für Ihre Sicherheitsprüfungen - Einfach, sicher, kompatibel mit allen Betriebssystemen.</p>
+        <a href="#download" class="cta-btn">Jetzt herunterladen</a>
+    </div>
+</section>
+
+<!-- Über die Software -->
+<section id="about">
+    <h2>Über die Software</h2>
+    <p>Unsere DGUV3 Software bietet eine benutzerfreundliche Lösung für alle Sicherheitsprüfungen gemäß den deutschen Sicherheitsstandards.</p>
+    <div class="features">
+        <div class="feature">
+            <h3>Intuitive Benutzeroberfläche</h3>
+            <p>Die benutzerfreundliche Oberfläche ermöglicht eine schnelle Einarbeitung.</p>
         </div>
-    </header>
+        <div class="feature">
+            <h3>Kompatibel mit allen Betriebssystemen</h3>
+            <p>Verfügbar für Windows, macOS und Linux.</p>
+        </div>
+        <div class="feature">
+            <h3>Automatisierte Berichterstellung</h3>
+            <p>Erstellen Sie automatisch Prüfberichte im DGUV3-Format.</p>
+        </div>
+    </div>
+</section>
 
-    <main>
-        <section class="form-section">
-            <h2>Unfallmeldung erfassen</h2>
-            <form id="unfallForm">
-                <div class="form-group">
-                    <label for="unfallDatum">Unfalldatum</label>
-                    <input type="date" id="unfallDatum" name="unfallDatum" required>
-                </div>
+<!-- Download-Bereich -->
+<section id="download">
+    <h2>Download</h2>
+    <p>Wählen Sie Ihr Betriebssystem:</p>
+    <div class="download-buttons">
+        <a href="windows-version-link" class="download-btn">Windows</a>
+        <a href="mac-version-link" class="download-btn">macOS</a>
+        <a href="linux-version-link" class="download-btn">Linux</a>
+    </div>
+</section>
 
-                <div class="form-group">
-                    <label for="unfallOrt">Unfallort</label>
-                    <input type="text" id="unfallOrt" name="unfallOrt" required>
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 DGUV3 Software. Alle Rechte vorbehalten.</p>
+        <a href="/datenschutz">Datenschutz</a> | <a href="/impressum">Impressum</a>
+    </div>
+</footer>
 
-                <div class="form-group">
-                    <label for="unfallArt">Art des Unfalls</label>
-                    <select id="unfallArt" name="unfallArt" required>
-                        <option value="Sturz">Sturz</option>
-                        <option value="Stoß">Stoß</option>
-                        <option value="Schlag">Schlag</option>
-                        <option value="Andere">Andere</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="verletzungen">Verletzungen</label>
-                    <textarea id="verletzungen" name="verletzungen" required></textarea>
-                </div>
-
-                <button type="submit">Unfall melden</button>
-            </form>
-        </section>
-
-        <section class="info-section">
-            <h2>Risikobewertung</h2>
-            <p>Führen Sie eine Risikobewertung durch, um den Schweregrad des Unfalls festzustellen.</p>
-            <button onclick="startRisikobewertung()">Zur Risikobewertung</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 DGU-V3 Software | Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
